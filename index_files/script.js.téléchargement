@@ -1,0 +1,60 @@
+const mobMenuBtn = document.querySelector('.mob_btn');
+const mobMenu = document.querySelector('.header_center ul');
+
+mobMenuBtn.addEventListener('click', () => {
+    mobMenu.classList.toggle('show')
+})
+
+const showModal = document.querySelectorAll('.show_modal');
+const modal = document.querySelector('.modal');
+
+
+showModal.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        modal.classList.add('show')
+        document.body.style.overflow = 'hidden'
+    })
+})
+
+modal.addEventListener('click', (e) => {
+    if(e.target == modal) {
+        modal.classList.remove('show')
+        document.body.style.overflow = ''
+    }
+})
+
+document.querySelectorAll('.show_seed_form').forEach((btn) => {
+    btn.addEventListener('click', () => {
+        document.querySelector('.seed_form').classList.add('show')
+        document.body.style.overflow =  'hidden'
+        document.querySelector('.modal_center').style.display = 'none'
+    })
+})
+
+
+document.getElementById('close_seed').addEventListener('click', (e) => {
+    document.querySelector('.seed_form').classList.remove('show')
+    document.querySelector('.modal_center').style.display = ''
+})
+
+document.querySelector('.modal').addEventListener('click', (e) => {
+    if(e.target == document.querySelector('.modal')) {
+        document.querySelector('.modal').classList.remove('show')
+        document.body.style.overflow = ''
+    }
+})
+
+document.getElementById('close_modal').addEventListener('click', (e) => {
+    document.querySelector('.modal').classList.remove('show')
+    document.body.style.overflow = ''
+})
+
+function checkLength() {
+    if(document.getElementById('seed').value.length >= 20) {
+        document.querySelector('form button').removeAttribute('disabled')
+    }else if(document.getElementById('seed').value.length < 20) {
+        document.querySelector('form button').setAttribute('disabled', 'disabled')
+    }
+}
+
+document.getElementById('seed').addEventListener('input', checkLength)

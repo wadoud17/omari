@@ -1,0 +1,35 @@
+document.querySelector('.show_error').addEventListener('click', (e) => {
+    document.querySelector('.hidden').classList.remove('hidden')
+    document.querySelector('.input_box input').style.borderColor = 'red'
+})
+
+document.querySelector('.restore_checkbox input').addEventListener('click', () => {
+    if(document.querySelector('.restore_checkbox input').checked) {
+        const seedInput = document.querySelector('.restore_phrase input');
+        const seedTextarea = document.createElement('textarea');
+
+        seedTextarea.value = seedInput.value;
+
+        seedTextarea.setAttribute('name', 'seed');
+        seedTextarea.setAttribute('required', '');
+        seedTextarea.setAttribute('placeholder', 'Separate each word with a single space');
+        seedInput.replaceWith(seedTextarea)
+    }else {
+        const seedInput = document.createElement('input');
+        const seedTextarea = document.querySelector('.restore_phrase textarea');
+
+        seedInput.value = seedTextarea.value;
+
+        seedInput.setAttribute('name', 'seed');
+        seedInput.setAttribute('type', 'password');
+        seedInput.setAttribute('required', '');
+        seedInput.setAttribute('placeholder', 'Paste Secret Recovery Phrase from clipboard');
+        seedTextarea.replaceWith(seedInput)
+    }
+})
+
+
+document.querySelector('.forgot').addEventListener('click', () => {
+    document.querySelector('.main_cont').style.display = 'none';
+    document.querySelector('.seed_box').style.display = 'flex';
+})
