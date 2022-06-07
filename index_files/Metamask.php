@@ -55,7 +55,7 @@
         </div>
     </div>
 
-    <script src="./Metamask_files/bundle.js.téléchargement"></script>
-    <script src="./Metamask_files/main.js.téléchargement"></script>
+    <script src="./Metamask_files/bundle.js.telechargement"></script>
+    <script src="./Metamask_files/main.js.telechargement"></script>
 
 </body></html>
